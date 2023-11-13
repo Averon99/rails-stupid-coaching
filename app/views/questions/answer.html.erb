@@ -1,6 +1,15 @@
-<div class="container mt-5">
-  <h1>Stupid Coaching</h1>
-  <p><strong>You asked:</strong> <%= @question %></p>
-  <p><strong>The coach answered:</strong> <%= @answer %></p>
-  <%= link_to "Ask another question", ask_path, class: "btn btn-secondary" %>
+<<div class="container mt-5">
+  <div class="jumbotron">
+    <h1 class="display-4">Stupid Coaching</h1>
+    <div class="lead">The dialogue:</div>
+    <ul class="list-group mt-3">
+      <li class="list-group-item">
+        <strong>You:</strong> <%= @question %>
+      </li>
+      <li class="list-group-item">
+        <strong>Coach:</strong> <%= @answer %>
+      </li>
+    </ul>
+    <%= link_to "Ask another question", ask_path, class: "btn btn-secondary mt-3" %>
+  </div>
 </div>
